@@ -19,4 +19,5 @@ def my_curl(adresse):
     os.system(f"curl {adresse}")
 
 def my_post(adresse, payload):
-    os.system(f"curl {adresse} -d '{payload}'")
+    #payload string : '{"key":"value}'
+    os.system(f"curl {adresse} -H 'Content-Type:application/json' -d '{payload}'")
